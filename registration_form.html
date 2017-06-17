@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corseco Registration Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300italic,300,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<script src="js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+	<div class="main">
+		<h1>Corseco Registration Form</h1>
+		<div class="content">
+			<div class="stepsForm">
+				<form method="post">
+					<div class="sf-steps">
+						<div class="sf-steps-content">
+							<div>
+								<span></span> Store Manager Details
+							</div>
+							<div>
+								<span></span> Store Details
+							</div>
+							
+							<div>
+								<span></span> Camera Setup
+							</div>
+						</div>
+					</div>                
+					<div class="sf-steps-form sf-radius"> 
+						
+						<ul class="sf-content"> <!-- form step one --> 
+							 <li>
+								<div class="sf_columns column_3">
+									<input type="text" name="name" placeholder="First Name" data-required="true">
+								</div>
+								<div class="sf_columns column_3">
+									<input type="text" name="surname" placeholder="Last Name" data-required="true">
+								</div>
+								<div class="sf_columns column_3">
+									<input type="text" placeholder="Email" data-required="true" data-email="true">
+								</div>
+								<div class="sf_columns column_3">
+									<input type="text" placeholder="Phone" data-number="true" data-required="false">
+								</div>
+							 </li>
+							 <li>
+								<div class="sf_columns column_3">
+									<input type="password" placeholder="Password" data-required="true" data-confirm="true">
+								</div>
+								<div class="sf_columns column_3">
+									<input type="password" placeholder="Re-Type Password" data-required="true" data-confirm="true">
+								</div>
+							 </li>
+							 <li>
+								<div class="sf_columns column_6">
+									<div class="sf-check">
+										<label><input type="checkbox" value="test" name="test" data-required="true"><span></span> By checking this box, I agree to the Terms & Conditions & Privacy Policy.</label>
+									</div>
+								</div>
+							 </li>
+							 
+						</ul>
+						   
+						<ul class="sf-content"> <!-- form step two --> 
+							 <li>
+								<div class="sf_columns column_3">
+									<input type="text" placeholder="Brand Name" data-required="true">
+								</div>
+								<div class="sf_columns column_3">
+									<input type="text" placeholder="Store  City" data-required="true">
+								</div>
+							 </li>
+							 <li>
+								<div class="sf_columns column_6">
+									<textarea placeholder="Address" name="ADDRESS"></textarea>
+								</div>
+							 </li>
+							 <li>
+								<div class="sf_columns column_3">
+									<label class="sf-select">
+										<select name="country" data-required="true">
+											<option value="" selected="selected" >Feature Opted</option>
+											<option value="de">Peoplecount</option>
+											<option value="en">Demographics</option>
+											<option value="us">Both</option>
+										</select>
+										<span></span>
+									</label>
+								</div>
+								<div class="sf_columns column_3">
+									<label class="sf-select">
+										<select name="country" data-required="true">
+											<option value="" selected="selected" >Number of Camera</option>
+											<option value="de">1</option>
+											<option value="en">2</option>
+											<option value="us">3</option>
+											<option value="tr">4</option>
+											<option value="jp">5</option>
+											<option value="de">6</option>
+											<option value="en">7</option>
+											<option value="us">8</option>
+											<option value="tr">9</option>
+											<option value="jp">10</option>
+										</select>
+										<span></span>
+									</label>
+								</div>
+							 </li>							 
+						</ul>
+		
+						
+						<ul class="sf-content"> <!-- form step three --> 
+							 <li>
+							    <div class="sf_columns column_6">
+									<input type="text" placeholder="Camera Name" data-required="true">
+								</div>
+								<div class="sf_columns column_6">
+									<label class="sf-select">
+										<select name="country" data-required="true">
+											<option value="" selected="selected" >Camera Type</option>
+											<option value="de">People Count</option>
+											<option value="en">Face Analysis</option>
+											<option value="us">Heatmap</option>
+										</select>
+										<span></span>
+									</label>
+								</div>
+								<div class="sf_columns column_6">
+									<input type="text" placeholder="Camera Install Location" data-required="true">
+								</div>
+							 </li>
+						</ul>
+					</div>
+					
+					<div class="sf-steps-navigation sf-align-right">
+						<span id="sf-msg" class="sf-msg-error"></span>
+						<button id="sf-prev" type="button" class="sf-button">Previous</button>
+						<button id="sf-next" type="button" class="sf-button">Next</button>
+					</div>
+				</form>
+				<script>
+					$(document).ready(function(e) {
+						
+						$(".stepsForm").stepsForm({
+							width			:'100%',
+							active			:0,
+							errormsg		:'Check faulty fields.',
+							sendbtntext		:'Submit',
+						}); 
+						
+						$(".container .themes>span").click(function(e) {
+							$(".container .themes>span").removeClass("selectedx");
+							$(this).addClass("selectedx");
+							$(".stepsForm").removeClass().addClass("stepsForm");
+							$(".stepsForm").addClass("sf-theme-"+$(this).attr("data-value"));
+						});
+					});
+				</script>
+
+			</div>
+
+		</div>
+		<p class="footer">© All Rights Reserved | Design by Corseco Technologies <a href="https://corseco.in/" target="_blank"></a></p>
+	</div>
+</body>
+</html>
