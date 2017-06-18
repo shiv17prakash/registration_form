@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corseco Login Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300italic,300,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<script src="js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+<!--header start here-->
+<header class="header-basic-light">
+
+	<div class="header-limiter">
+
+		<h1><a href="#">Corseco<span> Technologies</span></a></h1>
+
+		<nav>
+			<a href="Login_form.html"  class="selected">Login</a>
+			<a href="registration_form.html">Register</a>			
+		</nav>
+	</div>
+
+</header>
+<!--header end here-->
+	<div class="main">
+		<!--<h1>Corseco Registration Form</h1>-->
+		<div class="content">
+			<div class="stepsForm">
+				<form method="post">
+					<div class="sf-steps">
+						<div class="sf-steps-content">
+							<div>
+								<span></span> User Login
+							</div>
+						</div>
+					</div>                
+					<div class="sf-steps-form sf-radius">						
+						
+						<ul class="sf-content"> <!-- form step three -->
+						     <li>
+								<div class="sf_columns column_6">
+									<input type="text" placeholder="Email" data-required="true" data-email="true">
+								</div>								
+							 <li>
+								<div class="sf_columns column_6">
+									<input type="password" placeholder="Password" data-required="true" data-confirm="true">
+								</div>								
+							 </li>
+							 <li>
+								<div class="sf_columns column_6">
+									<div class="sf-check">
+										<label><input type="checkbox" value="test" name="test" data-required="true"><span></span> By checking this box, I agree to the Terms & Conditions & Privacy Policy.</label>
+									</div>
+								</div>
+							 </li>
+							 
+						</ul>
+					</div>
+					
+					<div class="sf-steps-navigation sf-align-right">
+						<span id="sf-msg" class="sf-msg-error"></span>
+						<button id="sf-prev" type="button" class="sf-button">Previous</button>
+						<button id="sf-next" type="button" class="sf-button">Next</button>
+					</div>
+				</form>
+				<script>
+					$(document).ready(function(e) {
+						
+						$(".stepsForm").stepsForm({
+							width			:'100%',
+							active			:0,
+							errormsg		:'Check faulty fields.',
+							sendbtntext		:'Login',
+						}); 
+						
+						$(".container .themes>span").click(function(e) {
+							$(".container .themes>span").removeClass("selectedx");
+							$(this).addClass("selectedx");
+							$(".stepsForm").removeClass().addClass("stepsForm");
+							$(".stepsForm").addClass("sf-theme-"+$(this).attr("data-value"));
+						});
+					});
+				</script>
+
+			</div>
+
+		</div>
+		<p class="footer">© All Rights Reserved | Design by Corseco Technologies <a href="https://corseco.in/" target="_blank"></a></p>
+	</div>
+</body>
+</html>
